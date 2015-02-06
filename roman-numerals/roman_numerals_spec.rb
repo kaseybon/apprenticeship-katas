@@ -13,4 +13,9 @@ describe Numerals do
 		number.value = 2
 		expect(number.roman).to eq('II')
 	end
+
+	it 'converts the number 5 to V' do
+		number.value = 5
+		expect(number.roman).to eq('V')
+	end
 end
