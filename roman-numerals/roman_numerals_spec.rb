@@ -9,4 +9,8 @@ describe Numerals do
 		expect(subject).to eq('I')
 	end
 
+	it 'converts the number 2 to II' do
+		number.value = 2
+		expect(number.roman).to eq('II')
+	end
 end
