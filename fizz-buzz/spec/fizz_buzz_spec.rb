@@ -8,4 +8,9 @@ describe Maths do
 	it 'passing 1 prints 1' do
 		expect(subject).to eq(1)
 	end
+
+	it 'passing 2 prints 2' do
+		number.value = 2
+		expect(subject).to eq(2)
+	end
 end
