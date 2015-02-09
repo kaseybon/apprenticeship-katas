@@ -18,4 +18,9 @@ describe Maths do
 		number.value = 3
 		expect(subject).to eq("Fizz")
 	end
+
+	it 'passing 5 equals Buzz' do
+		number.value = 5
+		expect(subject).to eq("Buzz")
+	end
 end

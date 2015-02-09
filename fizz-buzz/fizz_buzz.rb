@@ -9,6 +9,8 @@ class Maths
 	def count
 		if @value % 3 == 0
 			@value = "Fizz"
+		elsif @value % 5 == 0
+			@value = "Buzz"
 		else
 			@value
 		end
