@@ -3,17 +3,22 @@ class Numerals
 
 	def initialize(value)
 		@value = value
+		@collector = []
 	end
 
 	def roman
-		collector = []
+		ones
+		fives
+		@collector.join('')
+	end
 
+	def ones
 		value.times do 
-			collector << 'I'
+			@collector << 'I'
 		end
+	end
 
-		collector = ['V'] if collector.length == 5
-
-		collector.join('')
+	def fives
+		@collector = ['V'] if @collector.length == 5
 	end
 end
