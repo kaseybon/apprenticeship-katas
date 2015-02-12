@@ -13,7 +13,7 @@ class Numerals
 
 		until remainder == 0 do
 			# Loop through functions
-			for i in [tens(remainder), fives(remainder), ones(remainder)]
+			for i in [fifties(remainder), tens(remainder), fives(remainder), ones(remainder)]
 				i
 				break
 			end	
@@ -42,9 +42,16 @@ class Numerals
 	end
 
 	def tens(remainder)
-		if remainder >= 10
+		if remainder >= 10 && remainder < 50
 			@minus = 10
 			@roman = 'X'
+		end
+	end
+
+	def fifties(remainder)
+		if remainder >= 50 && remainder < 100
+			@minus = 50
+			@roman = 'L'
 		end
 	end
 end

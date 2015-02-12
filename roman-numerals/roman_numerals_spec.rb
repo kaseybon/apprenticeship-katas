@@ -28,4 +28,9 @@ describe Numerals do
 		number.value = 15
 		expect(number.romanize).to eq('XV')
 	end
+
+	it 'converts the number 50 to L' do
+		number.value = 50
+		expect(number.romanize).to eq('L')
+	end
 end
