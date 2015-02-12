@@ -18,4 +18,9 @@ describe Numerals do
 		number.value = 5
 		expect(number.romanize).to eq('V')
 	end
+
+	it 'converts the number 10 to X' do
+		number.value = 10
+		expect(number.romanize).to eq('X')
+	end
 end

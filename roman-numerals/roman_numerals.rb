@@ -13,7 +13,7 @@ class Numerals
 
 		until remainder == 0 do
 			# Loop through functions
-			for iterate in [fives(remainder), ones(remainder)]
+			for iterate in [tens(remainder), fives(remainder), ones(remainder)]
 				iterate
 				break
 			end	
@@ -35,9 +35,16 @@ class Numerals
 	end
 
 	def fives(remainder)
-		if remainder >= 5
+		if remainder >= 5 && remainder < 10
 			@minus = 5
 			@roman = 'V'
+		end
+	end
+
+	def tens(remainder)
+		if remainder >= 10
+			@minus = 10
+			@roman = 'X'
 		end
 	end
 end
