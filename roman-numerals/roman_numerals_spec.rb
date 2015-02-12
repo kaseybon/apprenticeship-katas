@@ -44,4 +44,11 @@ describe Numerals do
 		number.value = 4
 		expect(number.romanize).to eq('IV')
 	end
+	#That was actually easier to do than I thought
+
+	it 'converts the number 14 to XIV' do
+		number.value = 14
+		expect(number.romanize).to eq('XIV')
+	end
+
 end
