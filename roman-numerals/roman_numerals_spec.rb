@@ -33,4 +33,9 @@ describe Numerals do
 		number.value = 50
 		expect(number.romanize).to eq('L')
 	end
+
+	it 'converts the number 33 to XXXIII' do
+		number.value = 33
+		expect(number.romanize).to eq('XXXIII')
+	end
 end
