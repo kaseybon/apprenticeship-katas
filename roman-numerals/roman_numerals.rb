@@ -28,14 +28,17 @@ class Numerals
 	end
 
 	def ones(remainder)
-		if remainder >= 1 && remainder < 5
+		if remainder >= 1 && remainder < 4
 			@minus = 1
 			@roman = 'I'
 		end
 	end
 
 	def fives(remainder)
-		if remainder >= 5 && remainder < 10
+		if remainder == 4
+			@minus = 4
+			@roman = 'IV'
+		elsif remainder >= 5 && remainder < 10
 			@minus = 5
 			@roman = 'V'
 		end

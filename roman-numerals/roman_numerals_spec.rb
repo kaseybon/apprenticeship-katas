@@ -38,4 +38,10 @@ describe Numerals do
 		number.value = 33
 		expect(number.romanize).to eq('XXXIII')
 	end
+
+	#I've kind of been avoiding this one at this point...
+	it 'converts the number 4 to IV' do
+		number.value = 4
+		expect(number.romanize).to eq('IV')
+	end
 end
