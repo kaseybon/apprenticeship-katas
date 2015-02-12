@@ -38,14 +38,17 @@ class Numerals
 		if remainder == 4
 			@minus = 4
 			@roman = 'IV'
-		elsif remainder >= 5 && remainder < 10
+		elsif remainder >= 5 && remainder < 9
 			@minus = 5
 			@roman = 'V'
 		end
 	end
 
 	def tens(remainder)
-		if remainder >= 10 && remainder < 50
+		if remainder == 9
+			@minus = 9
+			@roman = 'IX'
+		elsif remainder >= 10 && remainder < 50
 			@minus = 10
 			@roman = 'X'
 		end
