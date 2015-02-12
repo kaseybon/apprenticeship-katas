@@ -23,4 +23,9 @@ describe Numerals do
 		number.value = 10
 		expect(number.romanize).to eq('X')
 	end
+
+	it 'converts the number 15 to XV' do
+		number.value = 15
+		expect(number.romanize).to eq('XV')
+	end
 end

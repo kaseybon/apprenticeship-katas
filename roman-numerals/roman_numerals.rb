@@ -13,8 +13,8 @@ class Numerals
 
 		until remainder == 0 do
 			# Loop through functions
-			for iterate in [tens(remainder), fives(remainder), ones(remainder)]
-				iterate
+			for i in [tens(remainder), fives(remainder), ones(remainder)]
+				i
 				break
 			end	
 
