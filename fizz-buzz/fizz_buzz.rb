@@ -2,24 +2,17 @@ class FizzBuzz
 	def initialize(value)
 		@value = value
 		@return = @value
+		@fizzybuzzy = { 3 => "Fizz", 5 => "Buzz", 15 => "FizzBuzz" }
 	end
 
 	def count
-		fizz
-		buzz
-		fizzbuzz
+		@fizzybuzzy.each do |key, array|
+			check(key, array)
+		end
 		@return
 	end
 
-	def fizz
-		@return = "Fizz" if @value % 3 == 0
-	end
-
-	def buzz
-		@return = "Buzz" if @value % 5 == 0
-	end
-
-	def fizzbuzz
-		@return = "FizzBuzz" if @value % 15 == 0
+	def check(num, string)
+		@return = string if @value % num == 0
 	end
 end
