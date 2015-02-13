@@ -7,6 +7,7 @@ class FizzBuzz
 	def count
 		fizz
 		buzz
+		fizzbuzz
 		@return
 	end
 
@@ -16,5 +17,9 @@ class FizzBuzz
 
 	def buzz
 		@return = "Buzz" if @value % 5 == 0
+	end
+
+	def fizzbuzz
+		@return = "FizzBuzz" if @value % 15 == 0
 	end
 end
