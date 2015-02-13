@@ -16,7 +16,7 @@ class Numerals
 			for i in [fifties(remainder), tens(remainder), fives(remainder), ones(remainder)]
 				i
 				break
-			end	
+			end
 
 			# Grab values
 			collector << @roman
@@ -27,37 +27,26 @@ class Numerals
 		collector.join
 	end
 
-	def ones(remainder)
-		if remainder >= 1 && remainder < 4
-			@minus = 1
-			@roman = 'I'
+	def add(remainder,lower,upper,roman)
+		if remainder >= lower && remainder < upper
+			@minus = lower
+			@roman = roman
 		end
+	end
+
+	def ones(remainder)
+		add(remainder,1,4,'I')
 	end
 
 	def fives(remainder)
-		if remainder == 4
-			@minus = 4
-			@roman = 'IV'
-		elsif remainder >= 5 && remainder < 9
-			@minus = 5
-			@roman = 'V'
-		end
+		add(remainder,5,9,'V')
 	end
 
 	def tens(remainder)
-		if remainder == 9
-			@minus = 9
-			@roman = 'IX'
-		elsif remainder >= 10 && remainder < 50
-			@minus = 10
-			@roman = 'X'
-		end
+		add(remainder,10,49,'X')
 	end
 
 	def fifties(remainder)
-		if remainder >= 50 && remainder < 100
-			@minus = 50
-			@roman = 'L'
-		end
+		add(remainder,50,100,'L')
 	end
 end
