@@ -5,6 +5,7 @@ class Numerals
 		@value = value
 		@minus
 		@roman
+		@params = { 50 => [100, 'L'], 10 => [49, 'X'], 5 => [9, 'V'], 1 => [4, 'I'] }
 	end
 
 	def romanize
@@ -12,10 +13,9 @@ class Numerals
 		collector = []
 
 		until remainder == 0 do
-			# Loop through functions
-			for i in [fifties(remainder), tens(remainder), fives(remainder), ones(remainder)]
-				i
-				break
+			# Loop through @params
+			@params.each do |key, array|
+				add(remainder, key, array[0], array[1])
 			end
 
 			# Grab values
@@ -32,21 +32,5 @@ class Numerals
 			@minus = lower
 			@roman = roman
 		end
-	end
-
-	def ones(remainder)
-		add(remainder,1,4,'I')
-	end
-
-	def fives(remainder)
-		add(remainder,5,9,'V')
-	end
-
-	def tens(remainder)
-		add(remainder,10,49,'X')
-	end
-
-	def fifties(remainder)
-		add(remainder,50,100,'L')
 	end
 end
