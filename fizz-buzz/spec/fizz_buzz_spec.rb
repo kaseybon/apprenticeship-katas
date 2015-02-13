@@ -18,4 +18,8 @@ describe FizzBuzz do
 		fizzbuzz = FizzBuzz.new 9
 		expect(fizzbuzz.count).to eq('Fizz')
 	end
+	it 'return Buzz when passed 10' do
+		fizzbuzz = FizzBuzz.new 10
+		expect(fizzbuzz.count).to eq('Buzz')
+	end
 end

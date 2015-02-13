@@ -15,6 +15,6 @@ class FizzBuzz
 	end
 
 	def buzz
-		@return = "Buzz" if @value == 5
+		@return = "Buzz" if @value % 5 == 0
 	end
 end
