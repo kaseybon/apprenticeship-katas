@@ -5,7 +5,7 @@ class Numerals
 		@value = value
 		@minus
 		@roman
-		@params = { 50 => [100, 'L'], 10 => [49, 'X'], 5 => [9, 'V'], 1 => [4, 'I'] }
+		@params = { 50 => ['L', 100], 10 => ['X', 49], 5 => ['V', 9], 4 => ['IV', 4], 1 => ['I', 3] }
 	end
 
 	def romanize
@@ -24,11 +24,12 @@ class Numerals
 		end
 
 		# Make it Roman
+		#print collector.join
 		collector.join
 	end
 
-	def add(remainder,lower,upper,roman)
-		if remainder >= lower && remainder < upper
+	def add(remainder, lower, roman, upper)
+		if remainder >= lower && remainder <= upper
 			@minus = lower
 			@roman = roman
 		end

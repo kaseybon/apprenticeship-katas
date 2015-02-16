@@ -39,18 +39,15 @@ describe Numerals do
 		expect(number.romanize).to eq('XXXIII')
 	end
 
-	#I've kind of been avoiding this one at this point...
 	it 'converts the number 4 to IV' do
 		number.value = 4
 		expect(number.romanize).to eq('IV')
 	end
-	#That was actually easier to do than I thought
-	# Ignore that line above, this was harder to do than I thought, in the process of refactoring and will run through these tests again...
 
-	# it 'converts the number 14 to XIV' do
-	# 	number.value = 14
-	# 	expect(number.romanize).to eq('XIV')
-	# end
+	it 'converts the number 14 to XIV' do
+		number.value = 14
+		expect(number.romanize).to eq('XIV')
+	end
 
 	# it 'converts the number 9 to IX' do
 	# 	number.value = 9
