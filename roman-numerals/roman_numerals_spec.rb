@@ -53,4 +53,9 @@ describe Numerals do
 		number.value = 9
 		expect(number.romanize).to eq('IX')
 	end
+
+	it 'converts the number 40 to XL' do
+		number.value = 40
+		expect(number.romanize).to eq('XL')
+	end
 end
