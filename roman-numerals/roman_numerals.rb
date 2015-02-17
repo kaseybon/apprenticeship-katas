@@ -5,7 +5,7 @@ class Numerals
 		@value = value
 		@minus
 		@roman
-		@params = { 50 => ['L', 100], 10 => ['X', 49], 5 => ['V', 9], 4 => ['IV', 4], 1 => ['I', 3] }
+		@params = { 50 => ['L', 100], 10 => ['X', 49], 9 => ['IX', 9], 5 => ['V', 8], 4 => ['IV', 4], 1 => ['I', 3] }
 	end
 
 	def romanize

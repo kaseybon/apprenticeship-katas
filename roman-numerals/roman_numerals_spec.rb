@@ -49,8 +49,8 @@ describe Numerals do
 		expect(number.romanize).to eq('XIV')
 	end
 
-	# it 'converts the number 9 to IX' do
-	# 	number.value = 9
-	# 	expect(number.romanize).to eq('IX')
-	# end
+	it 'converts the number 9 to IX' do
+		number.value = 9
+		expect(number.romanize).to eq('IX')
+	end
 end
