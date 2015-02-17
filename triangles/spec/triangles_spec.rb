@@ -10,5 +10,8 @@ describe 'Triangles' do
     expect { sides(0,0,0) }.to raise_error("Not a triangle")
   end
 
+  it 'raises an error if the sum of two of the sides are less than or equal than the third' do
+    expect { sides(1,1,3) }.to raise_error("Not a triangle")
+  end
 
 end   
