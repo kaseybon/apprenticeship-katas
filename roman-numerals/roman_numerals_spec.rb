@@ -63,4 +63,34 @@ describe Numerals do
 		number.value = 44
 		expect(number.romanize).to eq('XLIV')
 	end
+
+	it 'converts the number 100 to C' do
+		number.value = 100
+		expect(number.romanize).to eq('C')
+	end
+
+	it 'converts the number 500 to D' do
+		number.value = 500
+		expect(number.romanize).to eq('D')
+	end
+
+	it 'converts the number 1000 to M' do
+		number.value = 1000
+		expect(number.romanize).to eq('M')
+	end
+
+	it 'converts the number 400 to CD' do
+		number.value = 400
+		expect(number.romanize).to eq('CD')
+	end
+
+	it 'converts the number 900 to CM' do
+		number.value = 900
+		expect(number.romanize).to eq('CM')
+	end
+
+	it 'converts the number 789 to DCCLXXXIX' do
+		number.value = 789
+		expect(number.romanize).to eq('DCCLXXXIX')
+	end
 end
