@@ -17,7 +17,7 @@ describe Triangles do
     expect { subject.sides(1,1,3) }.to raise_error("Not a triangle")
   end
 
-  it 'to return equilateral if all sides are equal' do
+  it 'returns equilateral if all sides are equal' do
     expect(subject.sides(3,3,3)).to eq(:equilateral)
   end
 end   
