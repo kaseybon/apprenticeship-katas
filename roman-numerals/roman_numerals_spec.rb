@@ -58,4 +58,9 @@ describe Numerals do
 		number.value = 40
 		expect(number.romanize).to eq('XL')
 	end
+
+	it 'converts the number 44 to XLIV' do
+		number.value = 44
+		expect(number.romanize).to eq('XLIV')
+	end
 end
