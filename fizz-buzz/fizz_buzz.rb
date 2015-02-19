@@ -4,6 +4,18 @@ class Count
     @count_to = value
   end
 
+  def output
+  	collector = []
+
+  	(1..@count_to).each do |i|
+  		fizzbuzz = FizzBuzz.new i
+  		i = fizzbuzz.check unless fizzbuzz.check == nil
+      collector << i
+    end
+    
+    print collector.join(', ')
+  end
+
 end
 
 class FizzBuzz

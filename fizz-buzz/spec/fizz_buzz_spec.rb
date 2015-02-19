@@ -41,4 +41,9 @@ describe Count do
     count = Count.new 1
   end
 
+  # it 'prints from 1 to 100' do
+  # 	count = Count.new 100
+
+  # end
+
 end
