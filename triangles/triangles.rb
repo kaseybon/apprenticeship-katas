@@ -1,17 +1,39 @@
-class Triangles
+def sides(a,b,c)
+  errors = TriangleErrors.new
+  equilateral = EquilateralTriangles.new
+  isosceles = IsoscelesTriangles.new
 
-   def sides(a,b,c)
-    errors(a,b,c)
-    equilateral(a,b,c)
+  for checking in [errors, equilateral, isosceles]
+    if checking.is?(a,b,c)
+      return checking.type
+    end
   end
+end
 
-  def errors(a,b,c)
+class TriangleErrors
+  def is?(a,b,c)
     triangle = [a,b,c]
-    raise "Not a triangle" if triangle.any? { |x| x <= 0 } || ((a + b) <= c) || ((c + b) <= a)
+    triangle.sort.any? { |x| x <= 0 } || ((a + b) <= c) || ((c + b) <= a)
   end
-
-  def equilateral(a,b,c)
-    :equilateral if a == b && b == c
+  def type
+    raise "Not a triangle" 
   end
+end
 
+class EquilateralTriangles
+  def is?(a,b,c)
+    a == b && b == c
+  end
+  def type
+    :equilateral
+  end
+end
+
+class IsoscelesTriangles
+  def is?(a,b,c)
+    (a == b) || (a == c) || (b == c)
+  end
+  def type
+    :isosceles
+  end
 end
