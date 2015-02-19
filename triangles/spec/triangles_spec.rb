@@ -22,5 +22,9 @@ describe 'Triangles' do
   it 'returns isosceles if only two sides are equal' do
     expect(sides(3,4,4)).to eq(:isosceles)
   end
-  
-end   
+
+  it 'returns scalene if only no sides are equal and is still a triangle' do
+    expect(sides(3,4,5)).to eq(:scalene)
+  end
+
+end

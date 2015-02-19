@@ -2,8 +2,9 @@ def sides(a,b,c)
   errors = TriangleErrors.new
   equilateral = EquilateralTriangles.new
   isosceles = IsoscelesTriangles.new
+  scalene = ScaleneTriangles.new
 
-  for checking in [errors, equilateral, isosceles]
+  for checking in [errors, equilateral, isosceles, scalene]
     if checking.is?(a,b,c)
       return checking.type
     end
@@ -35,5 +36,14 @@ class IsoscelesTriangles
   end
   def type
     :isosceles
+  end
+end
+
+class ScaleneTriangles
+  def is?(a,b,c)
+    true
+  end
+  def type
+    :scalene
   end
 end
