@@ -16,7 +16,12 @@ end
 
 describe Frame do
 
-  it 'generates random number greater than 0 on the first try' do
+  it 'generates random number greater than or equal to 0 on the first try' do
+    frame = Frame.new
+    expect(frame.first_try).to be >= 0
+  end
+
+  it 'generates random number less than or equal to 10 on the first try' do
     frame = Frame.new
     expect(frame.first_try).to be >= 0
   end
