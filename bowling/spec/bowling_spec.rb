@@ -13,3 +13,13 @@ describe Bowling do
   end
 
 end
+
+describe Frame do
+
+  it 'generates random number greater than 0 on the first try' do
+    frame = Frame.new
+    expect(frame.first_try).to be >= 0
+  end
+
+
+end
