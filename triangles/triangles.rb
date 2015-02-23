@@ -4,14 +4,18 @@ def sides(a,b,c)
   isosceles = IsoscelesTriangles.new
   scalene = ScaleneTriangles.new
 
-  for checking in [errors, equilateral, isosceles, scalene]
-    if checking.is?(a,b,c)
-      return checking.type
-    end
+  #[errors, equilateral, isosceles, scalene].first { |checking| checking.is? }
+  #[errors, equilateral, isosceles, scalene].first(&:is?).type
+  
+  #### for checking in [errors, equilateral, isosceles, scalene]
+    
+  [errors, equilateral, isosceles, scalene].each do |checking|
+    return checking.type if checking.is?(a,b,c)
   end
-end
 
+end
 class TriangleErrors
+  
   def is?(a,b,c)
     triangle = [a,b,c]
     triangle.sort.any? { |x| x <= 0 } || ((a + b) <= c) || ((c + b) <= a)
