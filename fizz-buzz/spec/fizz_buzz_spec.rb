@@ -1,49 +1,30 @@
 require "spec_helper"
 require_relative "../fizz_buzz"
 
-describe FizzBuzz do
+describe 'FizzBuzz' do
 
 	it 'return 1 when passed 1' do
-		fizzbuzz = FizzBuzz.new 1
-		expect(fizzbuzz.check).to eq(1)
+		expect(fizzybuzzy(1)).to eq(1)
 	end
 
 	it 'return Fizz when passed 3' do
-		fizzbuzz = FizzBuzz.new 3
-		expect(fizzbuzz.check).to eq('Fizz')
+		expect(fizzybuzzy(3)).to eq('Fizz')
 	end
 
 	it 'return Buzz when passed 5' do
-		fizzbuzz = FizzBuzz.new 5
-		expect(fizzbuzz.check).to eq('Buzz')
+		expect(fizzybuzzy(5)).to eq('Buzz')
 	end
 
 	it 'return Fizz when passed 9' do
-		fizzbuzz = FizzBuzz.new 9
-		expect(fizzbuzz.check).to eq('Fizz')
+		expect(fizzybuzzy(9)).to eq('Fizz')
 	end
 
 	it 'return Buzz when passed 10' do
-		fizzbuzz = FizzBuzz.new 10
-		expect(fizzbuzz.check).to eq('Buzz')
+		expect(fizzybuzzy(10)).to eq('Buzz')
 	end
 
 	it 'return FizzBuzz when passed 15' do
-		fizzbuzz = FizzBuzz.new 15
-		expect(fizzbuzz.check).to eq('FizzBuzz')
+		expect(fizzybuzzy(15)).to eq('FizzBuzz')
 	end
-
-end
-
-describe Count do
-
-  it 'accepts a value' do
-    count = Count.new 1
-  end
-
-  # it 'prints from 1 to 100' do
-  # 	count = Count.new 100
-
-  # end
 
 end
