@@ -1,4 +1,4 @@
-class Player
+class Frame
   
   def roll(roll_one, roll_two = 0)
     strike = Strike.new(roll_one, roll_two)
