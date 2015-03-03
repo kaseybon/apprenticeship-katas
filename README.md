@@ -13,6 +13,10 @@ Katas
 
   Print numbers 1-100 while printing "Fizz" for multiples of 3, "Buzz" for multiples of 5 and "FizzBuzz" for multiples of both 3 and 5.
 
+* [Bowling](bowling/)
+
+  Create a scoring system for a bowling game.
+
 * [Yahtzee](yahtzee/)
 
   A playable version of Yahtzee for the command line.
