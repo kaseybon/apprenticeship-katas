@@ -39,6 +39,11 @@ describe Player do
     expect(player.turn(6) && player.turn(10)).to eq([6, 'X'])
   end
 
+  it 'stores two turns, (6) and (5,5) to game array' do
+    player = Player.new
+    expect(player.turn(6) && player.turn(5,5)).to eq([6, '/'])
+  end
+
 end
 
 # describe Score do

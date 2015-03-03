@@ -8,8 +8,8 @@ class Player
     @frame = Frame.new
   end
 
-  def turn(score)
-    score = @frame.roll(score)
+  def turn(roll_one, roll_two = 0)
+    score = @frame.roll(roll_one, roll_two)
     @game << score
   end
 
