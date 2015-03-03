@@ -1,7 +1,7 @@
 require 'spec_helper'
 require_relative '../bowling-frame'
 require_relative '../bowling-player'
-require_relative '../bowling-score'
+#require_relative '../bowling-score'
 
 describe Frame do
 
@@ -34,10 +34,15 @@ describe Player do
     expect(player.turn(6)).to eq([6])
   end
 
+  it 'stores two turns equaling 6 and 10 to game array' do
+    player = Player.new
+    expect(player.turn(6) && player.turn(10)).to eq([6, 'X'])
+  end
+
 end
 
-describe Score do
+# describe Score do
 
-  # Thought I was ready for this but I'm not...
+#   # Thought I was ready for this but I'm not...
 
-end
+# end
