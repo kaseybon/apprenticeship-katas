@@ -18,4 +18,9 @@ describe Player do
     expect(player.roll(3,4)).to eq(7)
   end
 
+  it 'rolls 5 and 5 then score equals /' do
+    player = Player.new
+    expect(player.roll(5,5)).to eq('/')
+  end
+
 end
