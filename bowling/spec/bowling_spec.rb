@@ -1,5 +1,6 @@
 require 'spec_helper'
-require_relative '../bowling'
+require_relative '../bowling-frame'
+require_relative '../bowling-score'
 
 describe Frame do
 
