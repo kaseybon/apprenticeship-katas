@@ -1,8 +1,8 @@
 class Player
   
-  def roll(pins)
-    strike = Strike.new pins
-    regular = Regular.new pins
+  def roll(roll_one, roll_two = 0)
+    strike = Strike.new(roll_one, roll_two)
+    regular = Regular.new(roll_one, roll_two)
 
     [strike, regular].each do |scoring|
       return scoring.set_score if scoring.equals?
@@ -12,8 +12,12 @@ class Player
 end
 
 class Score
-  def initialize(pins)
-    @score = pins
+  def initialize(roll_one, roll_two)
+    if roll_two > 0
+      @score = roll_one + roll_two
+    else
+      @score = roll_one
+    end
   end
 end
 
