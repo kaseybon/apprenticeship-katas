@@ -12,7 +12,7 @@ class Player
 
 end
 
-class Score
+class Rolls
   def initialize(roll_one, roll_two)
     if roll_two > 0
       @rolls = 2
@@ -24,7 +24,7 @@ class Score
   end
 end
 
-class Strike < Score
+class Strike < Rolls
   def equals?
     true if @score == 10
   end
@@ -33,7 +33,7 @@ class Strike < Score
   end
 end
 
-class Spare < Score
+class Spare < Rolls
   def equals?
     true if @score == 10 && @rolls == 2
   end
@@ -42,7 +42,7 @@ class Spare < Score
   end
 end
 
-class Regular < Score
+class Regular < Rolls
   def equals?
     true
   end
