@@ -7,22 +7,22 @@ describe Frame do
 
   it 'rolls 5 then score equals 5' do
     frame = Frame.new
-    expect(frame.roll(5)).to eq(5)
+    expect(frame.roll(5)).to eq([5, 0])
   end
 
   it 'rolls 10 then score equals X' do
     frame = Frame.new
-    expect(frame.roll(10)).to eq('X')
+    expect(frame.roll(10)).to eq(['X', nil])
   end
 
   it 'rolls 3 and 4 then score equals 7' do
     frame = Frame.new
-    expect(frame.roll(3,4)).to eq(7)
+    expect(frame.roll(3,4)).to eq([3,4])
   end
 
   it 'rolls 5 and 5 then score equals /' do
     frame = Frame.new
-    expect(frame.roll(5,5)).to eq('/')
+    expect(frame.roll(5,5)).to eq([5,'/'])
   end
 
 end

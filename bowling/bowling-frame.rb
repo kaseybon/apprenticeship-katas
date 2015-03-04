@@ -5,8 +5,8 @@ class Frame
     spare = Spare.new(roll_one, roll_two)
     regular = Regular.new(roll_one, roll_two)
 
-    [spare, strike, regular].each do |scoring|
-      return scoring.set_score if scoring.equals?
+    [strike, spare, regular].each do |scoring|
+      return scoring.set_score if scoring.is?
     end
   end
 
@@ -14,39 +14,35 @@ end
 
 class Rolls
   def initialize(roll_one, roll_two)
-    if roll_two > 0
-      @rolls = 2
-      @score = roll_one + roll_two
-    else
-      @rolls = 1
-      @score = roll_one
-    end
+  @roll_one = roll_one
+  @roll_two = roll_two
+  @score = []
   end
 end
 
 class Strike < Rolls
-  def equals?
-    true if @score == 10
+  def is?
+    true if @roll_one == 10
   end
   def set_score
-    @score = 'X'
+    @score = ['X', nil]
   end
 end
 
 class Spare < Rolls
-  def equals?
-    true if @score == 10 && @rolls == 2
+  def is?
+    true if @roll_one + @roll_two == 10
   end
   def set_score
-    @score = '/'
+    @score = [@roll_one, '/']
   end
 end
 
 class Regular < Rolls
-  def equals?
+  def is?
     true
   end
   def set_score
-    @score
+    @score = [@roll_one, @roll_two]
   end
 end
