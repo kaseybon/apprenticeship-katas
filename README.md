@@ -1,22 +1,28 @@
 Katas
 =====
 
-* [Roman Numerals](roman-numerals/) *- completed*
+Ruby
+----
+
+* [Roman Numerals](ruby/roman-numerals/) *- completed*
 	
 	Converts Arabic numbers to Roman Numerals.
 
-* [Triangles](triangles/) *- completed*
+* [Triangles](ruby/triangles/) *- completed*
 
   Determine what kind of triangle will be produced (or not produced) when passed three lengths of sides.
 
-* [Fizz Buzz](fizz-buzz/) *- completed*
+* [Fizz Buzz](ruby/fizz-buzz/) *- completed*
 
   Print numbers 1-100 while printing "Fizz" for multiples of 3, "Buzz" for multiples of 5 and "FizzBuzz" for multiples of both 3 and 5.
 
-* [Bowling](bowling/)
+* [Bowling](ruby/bowling/)
 
   Create a scoring system for a bowling game.
 
-* [Yahtzee](yahtzee/)
+* [Yahtzee](ruby/yahtzee/)
 
   A playable version of Yahtzee for the command line.
+
+  JavaScript
+  ----------

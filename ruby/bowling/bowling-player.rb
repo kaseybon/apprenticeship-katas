@@ -10,7 +10,11 @@ class Player
 
   def turn(roll_one, roll_two = 0)
     score = @frame.roll(roll_one, roll_two)
-    @game << score
+    print @game << score
   end
 
 end
+
+player = Player.new
+player.turn(4,6)
+player.turn(10)

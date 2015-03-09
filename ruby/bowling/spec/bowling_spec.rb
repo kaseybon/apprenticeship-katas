@@ -29,20 +29,20 @@ end
 
 describe Player do
 
-  it 'stores a turn equaling 6 to game array' do
+  it '' do
     player = Player.new
-    expect(player.turn(6)).to eq([6])
+    expect(player.turn(6)).to eq([6, 0])
   end
 
-  it 'stores two turns equaling 6 and 10 to game array' do
-    player = Player.new
-    expect(player.turn(6) && player.turn(10)).to eq([6, 'X'])
-  end
+  # it 'stores two turns equaling 6 and 10 to game array' do
+  #   player = Player.new
+  #   expect(player.turn(6) && player.turn(10)).to eq([6, 'X'])
+  # end
 
-  it 'stores two turns, (6) and (5,5) to game array' do
-    player = Player.new
-    expect(player.turn(6) && player.turn(5,5)).to eq([6, '/'])
-  end
+  # it 'stores two turns, (6) and (5,5) to game array' do
+  #   player = Player.new
+  #   expect(player.turn(6) && player.turn(5,5)).to eq([6, '/'])
+  # end
 
 end
 
