@@ -15,3 +15,9 @@ function Buzz(value) {
     return "Buzz";
   };
 };
+
+function FizzBuzz(value) {
+  this.is = function() {
+    if (value % 15 == 0) { return true; }
+  };
+};

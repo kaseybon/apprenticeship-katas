@@ -31,3 +31,20 @@ describe("Buzz", function() {
   });
 
 });
+
+describe("FizzBuzz", function() {
+  var fizzbuzz;
+
+  beforeEach(function() {
+    fizzbuzz = new FizzBuzz(15);
+  });
+
+  it("should return true if a number is divisible by 15", function() {
+    expect(fizzbuzz.is()).toEqual(true);
+  });
+
+  xit("should return FizzBuzz", function() {
+    expect(fizzbuzz.output()).toEqual("FizzBuzz");
+  });
+
+});
