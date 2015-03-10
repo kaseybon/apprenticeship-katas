@@ -6,4 +6,9 @@ describe("Fizz", function() {
     expect(fizz.is()).toEqual(true);
   });
 
+  it("should return Fizz", function() {
+    fizz = new Fizz(3);
+    expect(fizz.output()).toEqual("Fizz");
+  });
+
 });
