@@ -37,9 +37,10 @@ function Num(value) {
 function FizzyBuzzy(value) {
   this.check = function() {
     var fizz = new Fizz(value);
+    var buzz = new Buzz(value);
     var num = new Num(value);
 
-    var checkArray = [fizz, num];
+    var checkArray = [buzz, fizz, num];
     
     for (var i = 0; i < checkArray.length; i++) {
       if ( checkArray[i].is() == true ) {
