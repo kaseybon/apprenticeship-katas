@@ -10,7 +10,7 @@ Ruby
 * [Bowling](ruby/bowling/)
 * [Yahtzee](ruby/yahtzee/)
 
-  JavaScript
-  ----------
+JavaScript
+----------
 
-  * [Fizz Buzz](javascript/fizz-buzz/) *- completed*
+* [Fizz Buzz](javascript/fizz-buzz/) *- completed*
