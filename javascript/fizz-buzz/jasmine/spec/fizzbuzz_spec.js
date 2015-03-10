@@ -52,12 +52,14 @@ describe("FizzBuzz", function() {
 describe("FizzyBuzzy", function() {
   var fizzybuzzy;
 
-  beforeEach(function() {
+  it("should return 1 if passed 1", function() {
     fizzybuzzy = new FizzyBuzzy(1);
+    expect(fizzybuzzy.check()).toEqual(1);
   });
 
-  it("should return 1 if passed 1", function() {
-    expect(fizzybuzzy.check()).toEqual(1);
+  it("should return Fizz if passed 3", function() {
+    fizzybuzzy = new FizzyBuzzy(3);
+    expect(fizzybuzzy.check()).toEqual("Fizz");
   });
 
 });

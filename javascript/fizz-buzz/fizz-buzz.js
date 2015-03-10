@@ -25,8 +25,28 @@ function FizzBuzz(value) {
   };
 };
 
+function Num(value) {
+  this.is = function() {
+    return true;
+  };
+  this.output = function() {
+    return value;
+  };
+};
+
 function FizzyBuzzy(value) {
   this.check = function() {
-    return value;
+    var fizz = new Fizz(value);
+    var num = new Num(value);
+
+    var checkArray = [fizz, num];
+    
+    for (var i = 0; i < checkArray.length; i++) {
+      if ( checkArray[i].is() == true ) {
+        return checkArray[i].output();
+        break;
+      } 
+    };
+
   };
 };
