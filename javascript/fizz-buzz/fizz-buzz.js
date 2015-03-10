@@ -1,6 +1,6 @@
 function Fizz(value) {
   this.is = function() {
-    if (value % 3 == 0) { return true; }
+    if (value % 3 == 0 && value != 0) { return true; }
   };
   this.output = function() {
     return "Fizz";
@@ -9,7 +9,7 @@ function Fizz(value) {
 
 function Buzz(value) {
   this.is = function() {
-    if (value % 5 == 0) { return true; }
+    if (value % 5 == 0 && value != 0) { return true; }
   };
   this.output = function() {
     return "Buzz";
@@ -18,7 +18,7 @@ function Buzz(value) {
 
 function FizzBuzz(value) {
   this.is = function() {
-    if (value % 15 == 0) { return true; }
+    if (value % 15 == 0 && value != 0) { return true; }
   };
   this.output = function() {
     return "FizzBuzz";
@@ -49,6 +49,15 @@ function FizzyBuzzy(value) {
         break;
       } 
     };
-
   };
+};
+
+function counting() {
+ var countTo = prompt("How high would you like to count?");
+
+  for (var i = 0; i <= countTo; i++) {
+    var x = new FizzyBuzzy(i);
+    document.write("<p>" + x.check() + "</p>");
+  }
+
 };
