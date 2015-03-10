@@ -48,3 +48,16 @@ describe("FizzBuzz", function() {
   });
 
 });
+
+describe("FizzyBuzzy", function() {
+  var fizzybuzzy;
+
+  beforeEach(function() {
+    fizzybuzzy = new FizzyBuzzy(1);
+  });
+
+  it("should return 1 if passed 1", function() {
+    expect(fizzybuzzy.check()).toEqual(1);
+  });
+
+});

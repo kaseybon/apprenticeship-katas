@@ -24,3 +24,9 @@ function FizzBuzz(value) {
     return "FizzBuzz";
   };
 };
+
+function FizzyBuzzy(value) {
+  this.check = function() {
+    return value;
+  };
+};
