@@ -43,7 +43,7 @@ describe("FizzBuzz", function() {
     expect(fizzbuzz.is()).toEqual(true);
   });
 
-  xit("should return FizzBuzz", function() {
+  it("should return FizzBuzz", function() {
     expect(fizzbuzz.output()).toEqual("FizzBuzz");
   });
 
