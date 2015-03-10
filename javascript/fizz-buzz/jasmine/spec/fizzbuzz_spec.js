@@ -67,4 +67,9 @@ describe("FizzyBuzzy", function() {
     expect(fizzybuzzy.check()).toEqual("Buzz");
   });
 
+  it("should return FizzBuzz if passed 15", function() {
+    fizzybuzzy = new FizzyBuzzy(15);
+    expect(fizzybuzzy.check()).toEqual("FizzBuzz");
+  });
+
 });
