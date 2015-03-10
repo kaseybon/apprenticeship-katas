@@ -26,7 +26,7 @@ describe("Buzz", function() {
     expect(buzz.is()).toEqual(true);
   });
 
-  xit("should return Buzz", function() {
+  it("should return Buzz", function() {
     expect(buzz.output()).toEqual("Buzz");
   });
 

@@ -11,4 +11,7 @@ function Buzz(value) {
   this.is = function() {
     if (value % 5 == 0) { return true; }
   };
+  this.output = function() {
+    return "Buzz";
+  };
 };
