@@ -1,13 +1,15 @@
 describe("Fizz", function() {
   var fizz;
 
-  it("should return true if a number is divisible by 3", function() {
+  beforeEach(function() {
     fizz = new Fizz(3);
+  });
+
+  it("should return true if a number is divisible by 3", function() {
     expect(fizz.is()).toEqual(true);
   });
 
   it("should return Fizz", function() {
-    fizz = new Fizz(3);
     expect(fizz.output()).toEqual("Fizz");
   });
 
