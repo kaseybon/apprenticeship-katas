@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 1em Lato, Helvetica, Arial, sans-serif;
+  margin: 50px auto;
+  width: 500px;
+}
+
+.slider input {
+  width: 100%;
+}
+
+input[type=number], input[type=range] {
+  background: transparent;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=number] {
+  background: #f5f5f5;
+  border-bottom: 2px solid #555;
+  padding: .7em;
+}
+input[type=number]:hover, input[type=number]:focus, .slider:hover input[type=number] {
+  border-color: #1a9bfc;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #1a9bfc;
+  cursor: -webkit-grab;
+  width: 1.5em;
+  height: 1.5em;
+  transition: all .2s;
+  opacity: 0;
+}
+input[type=range]::-webkit-slider-thumb:active {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: -webkit-grabbing;
+  opacity: 1;
+}
+.slider:hover input[type=range]::-webkit-slider-thumb, .slider [type=number]:focus + input[type=range]::-webkit-slider-thumb {
+  opacity: 1;
+}

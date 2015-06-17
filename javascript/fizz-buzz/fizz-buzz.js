@@ -25,7 +25,7 @@ function FizzBuzz(value) {
   };
 };
 
-function Num(value) {
+function Num(value) { 
   this.is = function() {
     return true;
   };
@@ -42,13 +42,16 @@ function FizzyBuzzy(value) {
     var num = new Num(value);
 
     var checkArray = [fizzbuzz, buzz, fizz, num];
-    
-    for (var i = 0; i < checkArray.length; i++) {
-      if ( checkArray[i].is() == true ) {
-        return checkArray[i].output();
+    var result = null;
+    // for (var i = 0; i < checkArray.length; i++) {
+    checkArray.forEach( function(check) {  
+      // var check = checkArray[i];
+      if ( check.is() == true ) {
+        result = check.output();
         break;
       } 
-    };
+    });
+    return result;
   };
 };
 
