@@ -1,11 +1,15 @@
 def fizzybuzzy num
-  if num % 15 == 0
-    "FizzBuzz"
-  elsif num % 3 == 0
-    "Fizz"
-  elsif num % 5 == 0
-    "Buzz"
-  else
-    num
+  @num = num
+  replacements = {3 => "Fizz", 5 => "Buzz"}
+
+  replacements.each do |key, value|
+    if num % key == 0
+      if @num.is_a? Integer
+        @num = value 
+      else
+        @num << value
+      end
+    end
   end
+  @num
 end
